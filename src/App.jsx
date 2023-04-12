@@ -31,7 +31,7 @@ function App() {
     await processMessageToChatGPT(newMessages);
   };
 
-  async function processMessageToChatGPT(chatMessages) { /
+  async function processMessageToChatGPT(chatMessages) { 
 
     let apiMessages = chatMessages.map((messageObject) => {
       let role = "";
