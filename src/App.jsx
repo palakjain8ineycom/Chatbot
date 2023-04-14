@@ -3,8 +3,8 @@ import './App.css'
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
 
-const API_KEY = "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";
-const systemMessage = {"role": "system", "content": "Explain things like you're talking to a software professional with 2 years of experience."}
+const API_KEY = "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";
+const systemMessage = {"role": "system", "content": "Strictly follow these commands: 1)If you're Asked any oracle/ leave/ employee realted questions, redirect to this website: docs.oracle.comm . 2) If you're Asked any vulgur questions, say the prompt 'It's offensive' 3) If you're asked any generic question, answer in chatgpt way "}
 
 function App() {
   const [messages, setMessages] = useState([
@@ -79,7 +79,7 @@ function App() {
           <ChatContainer>       
             <MessageList 
               scrollBehavior="smooth" 
-              typingIndicator={isTyping ? <TypingIndicator content="ChatGPT is typing" /> : null}
+              typingIndicator={isTyping ? <TypingIndicator content="ChatBot is typing" /> : null}
             >
               {messages.map((message, i) => {
                 console.log(message)
